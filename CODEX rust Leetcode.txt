@@ -1,0 +1,28 @@
+struct Solution;
+
+impl Solution// impl implement solution 
+{
+    pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32// pub-> access specifier
+    {// i32 is signed integer of 32 bits
+        let mut output: Vec<i32>= vec![];
+        for x in nums
+        {
+            if output.iter().position(|num: &i32| num==x)==None
+            {
+                output.push(*x);
+            }
+        }
+        let len = output.len();
+        len as i32
+        
+        //return output.size();
+    
+    
+        
+    }
+}
+
+fn main()
+{
+    println!("{}",Solution::remove_duplicates(&mut vec![1,2,2,2]));
+}
